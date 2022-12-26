@@ -35,7 +35,6 @@ body {
 	font-family: 'Roboto Mono', monospace;
 	text-rendering: optimizeLegibility;
 	font-weight: 300;
-	line-height: 1.2;
 	color: var(--font-color);
 }
 
@@ -85,6 +84,10 @@ p code {
 
 .container {
 	padding: 4em;
+}
+
+.disabled {
+	pointer-events: none;
 }
 
 /* Home */

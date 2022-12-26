@@ -15,7 +15,7 @@
 
 <?php if (Paginator::numberOfPages() > 1): ?>
 <div>
-	<a href="<?php echo Paginator::previousPageUrl(); ?>">Newer</a>
-	<a href="<?php echo Paginator::nextPageUrl(); ?>">Older</a>
+	<a class="<?php if (!Paginator::showPrev()) echo 'disabled text-muted' ?>" href="<?php echo Paginator::previousPageUrl(); ?>">Newer</a>
+	<a class="<?php if (!Paginator::showNext()) echo 'disabled text-muted' ?>" href="<?php echo Paginator::nextPageUrl(); ?>">Older</a>
 </div>
 <?php endif ?>
