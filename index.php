@@ -9,7 +9,13 @@
 	<?php Theme::plugins('siteBodyBegin'); ?>
 
 	<div class="container">
-		<?php include(THEME_DIR_PHP . $WHERE_AM_I . '.php'); ?>
+		<?php
+			if ($WHERE_AM_I == 'home'){
+				include(THEME_DIR_PHP . 'home.php');
+			}else {
+				include(THEME_DIR_PHP . 'page.php');
+			}
+		?>
 	</div>	
 
 	<?php Theme::plugins('siteBodyEnd'); ?>

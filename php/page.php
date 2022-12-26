@@ -1,7 +1,7 @@
 <div class="page">
 	<?php Theme::plugins('pageBegin'); ?>
 
-	<a href="<?php echo Theme::siteUrl() ?>">../home</a>
+	<a href="<?php echo Theme::siteUrl() ?>">../</a>
 
 	<h1 class="nm"><?php echo $page->title(); ?></h1>
 

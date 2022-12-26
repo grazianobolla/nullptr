@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+:root {
+	--page-width: 700px;
+}
 
 /* :root {
-	--page-width: 800px;
 	--page-background: #f5f5f5;
 	--font-color: hsl(0, 0%, 20%);
 	--font-strong: #161616;
@@ -11,13 +14,12 @@
 } */
 
 :root {
-	--page-width: 800px;
 	--page-background: hsl(0, 0%, 7%);
 	--font-color: hsl(0, 0%, 85%);
-	--font-strong: #f5f5f5;
-	--font-muted: #acacac;
-	--font-less-muted: #e2e2e2;
-	--hyperlink: rgb(112, 162, 255);
+	--font-strong: hsl(0, 0%, 95%);
+	--font-muted: hsl(0, 0%, 45%);
+	--font-less-muted: hsl(0, 0%, 65%);
+	--hyperlink: #70a2ff;
 }
 
 
@@ -30,10 +32,10 @@ body {
 	background-color: var(--page-background);
 
 	/* Font stuff */
-	font-family: 'DM Mono', monospace;
+	font-family: 'Roboto Mono', monospace;
 	text-rendering: optimizeLegibility;
 	font-weight: 300;
-
+	line-height: 1.2;
 	color: var(--font-color);
 }
 
@@ -53,12 +55,12 @@ h4,
 h5,
 h6 {
 	color: var(--font-strong);
-	margin-bottom: -8px;
+	margin-bottom: 0;
 }
 
 p code {
 	color: hsl(303, 30%, 50%);
-	background-color: hsla(305, 16%, 15%, 0.1);
+	background-color: hsla(305, 16%, 15%, 0.3);
 	padding: 0 3px;
 }
 
@@ -77,7 +79,6 @@ p code {
 	color: var(--font-less-muted) !important;
 }
 
-
 .nm {
 	margin: 0;
 }
@@ -87,14 +88,6 @@ p code {
 }
 
 /* Home */
-.entry {
-	display: flex;
-}
-
-.entry a {
-	padding-left: 1em;
-}
-
 .home {
 	display: flex;
 }
@@ -107,19 +100,49 @@ p code {
 	margin-left: 0.5em;
 }
 
+/* Post list */
+.list-item {
+	display: flex;
+}
+
+.list-item a {
+	padding-left: 1em;
+}
+
 /* Page */
+.page .cover-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	margin-top: 16px;
+}
+
 .page {
 	max-width: var(--page-width);
 	margin: auto;
+	overflow: hidden;
 }
 
 .page .content p {
 	margin: 0.5em 0;
 }
 
-.cover-image {
-	width: 100%;
-	height: 200px;
-	object-fit: cover;
-	margin-top: 16px;
+/* Responsive desing */
+@media only screen and (max-width: 768px) {
+	.container {
+		padding: 4px;
+	}
+
+	.home {
+		flex-direction: column;
+	}
+
+	.list-item {
+		flex-direction: column;
+	}
+
+	.list-item a {
+		padding-left: 0 !important;
+		margin-bottom: 0.5em;
+	}
 }
