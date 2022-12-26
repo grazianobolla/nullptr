@@ -1,8 +1,11 @@
 <div class="page">
 	<?php Theme::plugins('pageBegin'); ?>
 
-	<a href="<?php echo Theme::siteUrl() ?>">../</a>
-
+	<div class="toolbar">
+		<a href="<?php echo Theme::siteUrl() ?>">../</a>
+		<a href="#" onclick="switchTheme()">theme</a>
+	</div>
+	
 	<h1 class="nm"><?php echo $page->title(); ?></h1>
 
 	<?php if (!$page->isStatic() && !$url->notFound()): ?>

@@ -10,6 +10,9 @@
 <!-- Include CSS Styles-->
 <?php echo Theme::css('css/style.css'); ?>
 
+<!-- Theme toggler -->
+<?php echo Theme::js('js/main.js'); ?>
+
 <!-- Highlightjs style and script -->
 <?php echo Theme::js('js/highlightjs/highlight.min.js'); ?>
 <?php echo Theme::js('js/highlightjs/gdscript.min.js'); ?>
