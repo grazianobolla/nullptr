@@ -10,11 +10,12 @@
 
 	<div class="container">
 		<?php
-			if ($WHERE_AM_I == 'home'){
-				include(THEME_DIR_PHP . 'home.php');
-			}else {
+			if ($WHERE_AM_I == 'page'){
 				include(THEME_DIR_PHP . 'page.php');
+				return;
 			}
+
+			include(THEME_DIR_PHP . 'home.php');
 		?>
 	</div>	
 
