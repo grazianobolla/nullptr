@@ -5,12 +5,9 @@
 <?php endif ?>
 
 <ul class="unstyled-list">
-	<?php foreach ($content as $page):?>
-		<li class="list-item">
-			<p class="text-muted nm"><?php echo $page->date(); ?></p>
-			<a class="nm" href="<?php echo $page->permalink(); ?>"><?php echo $page->title(); ?></a>
-		</li>
-	<?php endforeach?>
+	<?php foreach ($content as $page)
+		include(THEME_DIR_PHP . 'entry.php');
+	?>
 </ul>
 
 <?php if (Paginator::numberOfPages() > 1): ?>
